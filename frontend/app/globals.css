@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0f172a;
+  --navy-light: #1e293b;
+  --navy-lighter: #334155;
+  --amber: #f59e0b;
+  --amber-dark: #d97706;
+  --amber-light: #fef3c7;
+}
+
+body {
+  background: linear-gradient(180deg, #0a0f1c 0%, #0f172a 100%);
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+.ff-navbar {
+  background: linear-gradient(90deg, var(--navy) 0%, #131c31 100%);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+  color: white;
+}
+
+.ff-btn-primary {
+  background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dark) 100%);
+  color: var(--navy);
+  font-weight: 700;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+}
+.ff-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.35);
+}
+.ff-btn-primary:disabled {
+  opacity: 0.5;
+  transform: none;
+}
+
+.ff-btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--navy-lighter);
+  color: #e2e8f0;
+  transition: all 0.2s ease;
+}
+.ff-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--amber);
+}
+
+.ff-card {
+  background: linear-gradient(145deg, var(--navy-light) 0%, #16213a 100%);
+  border: 1px solid var(--navy-lighter);
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.ff-input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--navy-lighter);
+  color: #e2e8f0;
+  border-radius: 0.6rem;
+  transition: border-color 0.2s ease;
+}
+.ff-input:focus {
+  outline: none;
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+.ff-input::placeholder {
+  color: #64748b;
+}
+
+.ff-stat-card {
+  background: linear-gradient(145deg, var(--navy-light), var(--navy));
+  border: 1px solid var(--navy-lighter);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.ff-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--amber), transparent);
+}
+
+.ff-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.ff-badge-pending { background: rgba(148, 163, 184, 0.2); color: #cbd5e1; border: 1px solid #64748b; }
+.ff-badge-assigned { background: rgba(59, 130, 246, 0.15); color: #93c5fd; border: 1px solid #3b82f6; }
+.ff-badge-in_transit { background: rgba(245, 158, 11, 0.15); color: var(--amber); border: 1px solid var(--amber); }
+.ff-badge-delivered { background: rgba(34, 197, 94, 0.15); color: #86efac; border: 1px solid #22c55e; }
+.ff-badge-cancelled { background: rgba(239, 68, 68, 0.15); color: #fca5a5; border: 1px solid #ef4444; }
+
+.ff-table th {
+  color: #94a3b8;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+.ff-table td, .ff-table th {
+  padding: 0.85rem 0.5rem;
+}
+.ff-table tr {
+  border-bottom: 1px solid var(--navy-lighter);
+}
+.ff-table tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.ff-modal-backdrop {
+  background: rgba(10, 15, 28, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+.ff-step-dot {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+.ff-step-dot.active {
+  background: var(--amber);
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+}
+.ff-step-dot.inactive {
+  background: var(--navy-lighter);
+}
